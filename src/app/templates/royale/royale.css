@@ -2253,39 +2253,35 @@ body::before {
   overflow: hidden;
 }
 
-/* The well spans the top portion of the card and is clipped to the card's own
-   arch panel shape. Height is locked to 46% so the artwork never infringes
-   on the text area below. */
+/* The well spans the card and is clipped to the card's arch panel shape. */
 .ryc-card__artwell {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 48%;
+  inset: 0;
   clip-path: url(#ryCeremonyPanel);
   pointer-events: none;
   z-index: 1;
 }
 
 /* Each illustration fitted into the upper region under the arch:
-   taller illustrations stay within the top 48% and centre across it. */
+   taller illustrations stay within the top 44% and centre across it,
+   leaving ample breathing space above the text below. */
 .ryc-card__art {
   position: absolute;
-  top: 6%;
+  top: 7%;
   left: 50%;
-  width: 76%;
-  height: 88%;
+  width: 70%;
+  height: 37%;
   object-fit: contain;
   transform: translateX(-50%);
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* The content body strictly occupies the area from 48% down to the base.
+/* The content body strictly occupies the area from 46% down to the base.
    This guarantees the heading and details never collide with the artwork. */
 .ryc-card__body {
   position: absolute;
-  top: 48%;
+  top: 46%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -2293,7 +2289,7 @@ body::before {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 6% 6%;
+  padding: 2px 6% 6%;
   text-align: center;
   z-index: 2;
 }
@@ -2302,15 +2298,14 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  margin-top: 2px;
 }
 
 .ryc-card__name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(16px, 5.2cqw, 22px);
+  font-size: clamp(15px, 4.8cqw, 20px);
   font-weight: 600;
   line-height: 1.18;
   color: var(--royale-ceremony-ink);
@@ -2320,7 +2315,7 @@ body::before {
 .ryc-card__sub {
   margin: 2px 0 0;
   font-family: var(--font-names);
-  font-size: clamp(11px, 3.4cqw, 13px);
+  font-size: clamp(11px, 3.2cqw, 13px);
   font-style: italic;
   font-weight: 500;
   color: var(--royale-crimson);
