@@ -17,8 +17,8 @@ export interface Ceremony {
 
 export const CEREMONIES: Ceremony[] = [
   {
-    name: "Kankotri Lekhan",
-    art: "ring_ceremony.webp",
+    name: "KANKOTRI LEKHAN",
+    art: "kankotri_art.png",
     dateUpper: "15 JANUARY 2027",
     timingLine: "Timing to be announced",
     dateStr: "Fri, 15 Jan 2027",
@@ -29,7 +29,7 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
-    name: "Mehndi Ceremony",
+    name: "MEHNDI &\nFAMILY LUNCH",
     art: "mehendi.webp",
     dateUpper: "29 JANUARY 2027",
     timingLine: "Timing to be announced",
@@ -41,7 +41,7 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
-    name: "Grah Shanti & Reception",
+    name: "GRAH SHANTI\n& RECEPTION",
     art: "reception.webp",
     dateUpper: "30 JANUARY 2027",
     timingLine: "Timing to be announced",
@@ -53,8 +53,8 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "Umang Party Plot, near Chikhodra Circle, Anand",
   },
   {
-    name: "Travel to Mandavgarh",
-    art: "pavilion.webp",
+    name: "TRAVEL TO\nMANDAVGARH",
+    art: "travel_art.png",
     dateUpper: "31 JANUARY 2027",
     timingLine: "Timing to be announced",
     dateStr: "Sun, 31 Jan 2027",
@@ -65,7 +65,7 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "Anand to Mandavgarh (Mandu), Madhya Pradesh",
   },
   {
-    name: "Haldi Celebration",
+    name: "HALDI POOL\nCELEBRATION",
     art: "haldi.webp",
     dateUpper: "01 FEBRUARY 2027",
     timingLine: "Timing to be announced",
@@ -77,7 +77,7 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
-    name: "Sangeet Night",
+    name: "SANGEET NIGHT",
     art: "sangeet.webp",
     dateUpper: "01 FEBRUARY 2027",
     timingLine: "Timing to be announced",
@@ -89,7 +89,19 @@ export const CEREMONIES: Ceremony[] = [
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
-    name: "Wedding Ceremony",
+    name: "HERITAGE TOUR",
+    art: "heritage_art.png",
+    dateUpper: "02 FEBRUARY 2027",
+    timingLine: "Timing to be announced",
+    dateStr: "Tue, 2 Feb 2027",
+    isoDate: "2027-02-02",
+    time: "09:00",
+    venue: "Chinmay Resort / Mandu",
+    city: "Mandavgarh (Mandu), MP",
+    fullAddress: "Mandavgarh (Mandu), Madhya Pradesh",
+  },
+  {
+    name: "GRAND WEDDING\nCELEBRATION",
     art: "vivaah.webp",
     dateUpper: "02 FEBRUARY 2027",
     timingLine: "Timing to be announced",
@@ -99,18 +111,6 @@ export const CEREMONIES: Ceremony[] = [
     venue: "Chinmay Resort",
     city: "Mandavgarh (Mandu), MP",
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
-  },
-  {
-    name: "Departure for Anand",
-    art: "lotus_bunch.png",
-    dateUpper: "03 FEBRUARY 2027",
-    timingLine: "Timing to be announced",
-    dateStr: "Wed, 3 Feb 2027",
-    isoDate: "2027-02-03",
-    time: "09:00",
-    venue: "Chinmay Resort to Anand",
-    city: "Return to Gujarat",
-    fullAddress: "Chinmay Resort, Mandavgarh to Anand, Gujarat",
   },
 ];
 
@@ -136,52 +136,38 @@ export const FRAMES: GalleryFrame[] = [
   { kind: "landscape", hang: 92, caption: "#usforever" },
 ];
 
-export interface FamilyCard {
-  id: string;
-  card: string;
-  name: string;
-  relLabel: string;
-  parents: string[];
-  note?: string;
-}
-
-export const FAMILIES: FamilyCard[] = [
-  {
-    id: "ryHostsCard",
-    card: "hostsFamily",
-    name: "Hosts",
-    relLabel: "Cordially Invited by",
-    parents: [
-      "Vinubhai Dayabhai Patel",
-      "Late Parsottambhai Dayabhai Patel",
-      "Vimal and Kanisha Patel (Inside Solution)",
-    ],
-    note: "14 Mansi Twins, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
-  },
-  {
-    id: "ryGroomCard",
-    card: "groomFamily",
-    name: "Chi. Jatan",
-    relLabel: "Son of",
-    parents: ["Family Patel"],
-  },
-  {
-    id: "ryBrideCard",
-    card: "brideFamily",
-    name: "Kum. Pearl",
-    relLabel: "Daughter of",
-    parents: ["Family Patel"],
-  },
-];
-
 export const COMPLIMENTS = [
-  "Vinubhai Dayabhai Patel & Family",
-  "Late Parsottambhai Dayabhai Patel & Family",
+  "Vinubhai Dahyabhai Patel",
+  "Late Parsottambhai Dayabhai Patel",
   "Vimal and Kanisha Patel (Inside Solution)",
 ];
 
-export const NOTE =
-  "Your presence will make our celebration truly memorable. Kindly confirm your family's attendance in advance to help us arrange comfortable accommodation and hospitality for everyone.";
+export const NOTE_SECTIONS = {
+  salutation: "Dear Family and Friends,",
+  intro: "We are delighted to invite you to be part of our wedding celebrations.",
+  body: "Your love, blessings and presence mean the world to us. We look forward to sharing beautiful traditions, joyful celebrations and unforgettable memories with everyone who has been part of our journey.",
+  closing: "We cannot wait to celebrate these special moments together in the beautiful surroundings of Mandavgarh.",
+  signOff: "With love,",
+  couple: "PEARL & JATAN",
+};
+
+export const CELEBRATION_CARDS = [
+  {
+    icon: "floral1.png",
+    title: "LOVE & TOGETHERNESS",
+    alt: "Floral sprig motif",
+  },
+  {
+    icon: "lotus_crest.png",
+    title: "TRADITIONS & CULTURE",
+    alt: "Lotus crest motif",
+  },
+  {
+    icon: "elephant.png",
+    title: "MEMORIES & CELEBRATIONS",
+    alt: "Royal elephant motif",
+  },
+];
 
 // ---- Website Texts & Config -----------------------------------------------
 
@@ -190,11 +176,20 @@ export const INVOCATION_LANG = "gu";
 export const GUEST_GREETING_DEFAULT = "Mr. Patidar and Family";
 export const INTRO_NOTE =
   "Together with their families, we cordially invite you to celebrate the destination wedding of…";
-
-export const HERO_WELCOME = "Let's come together and celebrate this occasion.";
-export const HERO_BANNER_TITLE = "Destination Wedding • 15 January – 2 February 2027";
-export const HERO_BANNER_LOC = "Anand, Gujarat & Mandavgarh (Mandu), Madhya Pradesh";
+export const HERO_TAGLINE = "DESTINATION WEDDING";
+export const HERO_WELCOME = "Together with their families, we invite you to celebrate our special journey.";
+export const HERO_BANNER_TITLE = "15 JANUARY – 03 FEBRUARY 2027";
+export const HERO_BANNER_LOC = "MANDAVGARH (MANDU), MADHYA PRADESH";
 export const OUTRO_MESSAGE = "Your Presence Means the World to Us";
+
+export const VENUE_DETAILS = {
+  name: "CHINMAY RESORT",
+  location: "Mandavgarh (Mandu), Madhya Pradesh",
+  description:
+    "Surrounded by the timeless charm of Mandu, Chinmay Resort will be the setting for our wedding celebrations. We look forward to welcoming our loved ones to share these special moments with us.",
+  googleMapsUrl: "https://maps.google.com/?q=Chinmay+Resort+Mandu+Madhya+Pradesh",
+  directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Chinmay+Resort+Mandu+Madhya+Pradesh",
+};
 
 // ---- dates ----------------------------------------------------------------
 

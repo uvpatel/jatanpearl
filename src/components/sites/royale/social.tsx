@@ -128,11 +128,8 @@ export function Social() {
 
   return (
     <>
-      <section className="royale-social" aria-label="Follow the couple, the venues, and the dates">
+      <section className="royale-social" aria-label="Ceremony locations and calendar">
         <div className="socials">
-          <button className="social" type="button" aria-label="Instagram" onClick={() => setView("ig")}>
-            <span className="social__icon social__icon--instagram" aria-hidden="true" />
-          </button>
           <button className="social" type="button" aria-label="Ceremony locations" onClick={() => setView("loc")}>
             <span className="social__icon social__icon--location" aria-hidden="true" />
           </button>

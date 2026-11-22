@@ -3933,85 +3933,61 @@ body {
   color: inherit;
 }
 
-/* --- Hero destination event details & tagline ------------------------- */
-.royale-hero__sub {
-  position: absolute;
-  top: 36%;
-  left: 0;
-  right: 0;
+/* --- Destination Announcement Banner (Below Hero) -------------------- */
+.ry-destination-banner {
+  padding: clamp(44px, 6vw, 70px) 24px clamp(24px, 3.5vw, 36px);
+  background-color: var(--royale-paper);
+  background-image: url("/sites/royale/media/motif_tile.svg");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding-inline: 16px;
-  z-index: 2;
-  pointer-events: none;
+  justify-content: center;
 }
 
-.royale-hero__tagline {
-  margin: 0 0 6px 0;
+.ry-destination-banner__title {
   font-family: var(--font-names);
-  font-size: clamp(16px, 2.2cqw, 28px);
+  font-size: clamp(18px, 2.5vw, 27px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #4e0917;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ry-destination-banner__welcome {
+  font-family: var(--font-names);
   font-style: italic;
-  font-weight: 600;
-  color: var(--royale-gold);
-  text-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.8),
-    0 0 12px rgba(212, 163, 89, 0.4);
+  font-size: clamp(15px, 1.8vw, 19px);
+  color: #692230;
+  margin: 10px auto 16px;
+  max-width: 620px;
+  line-height: 1.5;
 }
 
-.royale-hero__welcome {
-  margin: 0 0 14px 0;
+.ry-destination-banner__dates {
   font-family: var(--font-display);
-  font-size: clamp(13px, 1.4cqw, 18px);
-  color: #fff6e8;
-  letter-spacing: 0.05em;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.royale-hero__banner {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(43, 10, 18, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--royale-gold);
-  border-radius: 9999px;
-  padding: 8px 24px;
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.5),
-    inset 0 0 12px rgba(212, 163, 89, 0.2);
-}
-
-.royale-hero__banner-title {
-  font-family: var(--font-display);
-  font-size: clamp(12px, 1.3cqw, 15px);
+  font-size: clamp(12px, 1.4vw, 14.5px);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--royale-gold);
+  color: #38040f;
+  margin: 0;
 }
 
-.royale-hero__banner-loc {
-  font-family: var(--font-names);
-  font-style: italic;
-  font-size: clamp(12px, 1.2cqw, 14px);
-  color: #fdf2e1;
-  letter-spacing: 0.03em;
-  margin-top: 3px;
-}
-
-@media (min-width: 700px) {
-  .royale-hero__sub {
-    top: 24%;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 900px) {
-  .royale-hero__sub {
-    top: 34%;
-  }
+.ry-destination-banner__loc {
+  font-family: var(--font-display);
+  font-size: clamp(10px, 1.1vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7d434f;
+  margin: 4px 0 0 0;
 }
 
 .ryc-card__details {
@@ -4024,4 +4000,691 @@ body {
   line-height: 1.35;
   text-align: center;
 }
+
+/* ==========================================================================
+   PAGE.PDF REPLICATION: NAVBAR, CELEBRATION, VENUE, MAP, RSVP & FOOTER
+   ========================================================================== */
+
+/* --- 1. Top Navbar ---------------------------------------------------- */
+.ry-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(43, 6, 16, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 163, 89, 0.25);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ry-navbar__inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ry-navbar__brand {
+  font-family: var(--font-names);
+  font-style: italic;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--royale-gold);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s;
+}
+
+.ry-navbar__brand:hover {
+  opacity: 0.85;
+}
+
+.ry-navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+.ry-navbar__link {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff6e8;
+  text-decoration: none;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.ry-navbar__link:hover {
+  color: var(--royale-gold);
+}
+
+.ry-navbar__link.is-active {
+  color: var(--royale-gold);
+}
+
+.ry-navbar__link.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--royale-gold);
+  border-radius: 1px;
+}
+
+@media (max-width: 768px) {
+  .ry-navbar {
+    height: 52px;
+  }
+  .ry-navbar__nav {
+    display: none; /* Mobile keeps clean brand and unhindered view */
+  }
+}
+
+/* --- Shared Title & Ornament Styles ----------------------------------- */
+.ry-sec-title {
+  font-family: var(--font-names);
+  font-size: clamp(22px, 3.8vw, 36px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38040f;
+  margin: 0;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.ry-sec-eyebrow {
+  font-family: var(--font-names);
+  font-size: clamp(12px, 1.4vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a2b3b;
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+.ry-sec-desc {
+  font-family: var(--font-names);
+  font-size: clamp(14px, 1.6vw, 17px);
+  font-style: italic;
+  color: #632331;
+  text-align: center;
+  max-width: 680px;
+  margin: 12px auto 0;
+  line-height: 1.6;
+}
+
+.ry-title-ornament {
+  width: 140px;
+  height: 12px;
+  margin: 10px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ry-title-ornament::before,
+.ry-title-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(175, 125, 60, 0.6));
+}
+
+.ry-title-ornament::after {
+  background: linear-gradient(90deg, rgba(175, 125, 60, 0.6), transparent);
+}
+
+.ry-title-ornament::marker,
+.ry-title-ornament {
+  background-image: none;
+}
+
+.ry-title-ornament:not(:empty) {
+  display: block;
+}
+
+/* Center tiny diamond */
+.ry-title-ornament:empty::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(175, 125, 60, 0.6));
+}
+.ry-title-ornament:empty::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(175, 125, 60, 0.6), transparent);
+}
+
+/* --- 2. Celebration Section ------------------------------------------- */
+.ry-celebration {
+  padding: clamp(30px, 4vw, 55px) 24px clamp(40px, 6vw, 70px);
+  background-color: var(--royale-paper);
+  background-image: url("/sites/royale/media/motif_tile.svg");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+  z-index: 2;
+}
+
+.ry-celebration__header {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 54px);
+}
+
+.ry-celebration__grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+}
+
+@media (max-width: 768px) {
+  .ry-celebration__grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+  }
+}
+
+.ry-feature-card {
+  background: #fff8ef;
+  border: 1px solid rgba(195, 150, 85, 0.55);
+  border-radius: 16px;
+  padding: 30px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow:
+    0 4px 20px rgba(70, 15, 25, 0.06),
+    inset 0 0 16px rgba(212, 163, 89, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ry-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 28px rgba(70, 15, 25, 0.12),
+    inset 0 0 16px rgba(212, 163, 89, 0.2);
+}
+
+.ry-feature-card__art {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.ry-feature-card__art img {
+  max-height: 85px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
+}
+
+.ry-feature-card__title {
+  margin: 0;
+  font-family: var(--font-names);
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #38040f;
+  line-height: 1.3;
+}
+
+/* --- 3. Venue Spotlight ----------------------------------------------- */
+.ry-venue {
+  padding: clamp(40px, 6vw, 70px) 24px 0;
+  background-color: var(--royale-paper);
+  background-image: url("/sites/royale/media/motif_tile.svg");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.ry-venue__header {
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.ry-venue__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(12px, 1.3vw, 14.5px);
+  font-weight: 500;
+  color: #7a2b3b;
+  margin: 10px 0 0 0;
+  letter-spacing: 0.04em;
+}
+
+.ry-pin-icon {
+  width: 16px;
+  height: 16px;
+  color: #a2293d;
+  flex-shrink: 0;
+}
+
+.ry-venue__desc {
+  margin-top: 14px;
+}
+
+/* --- 4. Gallery Header ------------------------------------------------ */
+.ry-gallery-header {
+  text-align: center;
+  padding: 0 24px 20px;
+}
+
+/* --- 5. Ceremonies Header & Corners ----------------------------------- */
+.royale-ceremonies {
+  position: relative;
+}
+
+.ry-ceremonies-corner {
+  position: absolute;
+  top: 12px;
+  width: clamp(90px, 15vw, 180px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.ry-ceremonies-corner--left {
+  left: 12px;
+}
+
+.ry-ceremonies-corner--right {
+  right: 12px;
+  transform: scaleX(-1);
+}
+
+.ry-ceremonies-corner img {
+  width: 100%;
+  height: auto;
+  opacity: 0.92;
+}
+
+.ryc-header {
+  text-align: center;
+  padding: 0 20px clamp(28px, 4vw, 48px);
+  position: relative;
+  z-index: 4;
+}
+
+.ryc-subtitle {
+  font-family: var(--font-names);
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #fff6e8;
+  max-width: 640px;
+  margin: 8px auto 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.95;
+}
+
+/* --- 6. Scroll Card Refinements (Matching Reference) ------------------ */
+#ryNoteCard .royale-scroll__sheet,
+#ryComplimentCard .royale-scroll__sheet {
+  background:
+    linear-gradient(to bottom, rgb(20 0 8 / 0.5), transparent calc(var(--roll-h) * 1.3)),
+    linear-gradient(to top, rgb(20 0 8 / 0.5), transparent calc(var(--roll-h) * 1.3)),
+    radial-gradient(ellipse 80% 70% at 50% 50%, #580620, #420215 65%, #2a000c);
+  padding: 16% 10% 14%;
+}
+
+/* Card titles in rich warm gold */
+#ryNoteCard .royale-scroll__name,
+#ryComplimentCard .royale-scroll__name {
+  font-family: var(--font-names);
+  font-size: clamp(24px, 3.8vw, 36px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5be75;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+}
+
+/* Compliments lines */
+#ryComplimentCard .royale-scroll__line {
+  font-family: var(--font-names);
+  font-size: clamp(17px, 2.3vw, 22px);
+  font-weight: 500;
+  color: #fae6cf;
+  letter-spacing: 0.03em;
+  margin: 6px 0;
+}
+
+/* Note From Us body container */
+.royale-scroll__note-body {
+  text-align: center;
+  font-family: var(--font-names);
+  color: #fae6cf;
+  padding: 0;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Salutation: Dear Family and Friends, */
+.royale-scroll__note-salutation {
+  font-family: var(--font-names);
+  font-size: clamp(17px, 2.4vw, 22px);
+  font-weight: 600;
+  color: #fae6cf;
+  margin: 0 0 18px 0;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+/* Body paragraphs */
+.royale-scroll__note-p {
+  font-family: var(--font-names);
+  font-size: clamp(15px, 2vw, 19.5px);
+  font-weight: 500;
+  color: #fae6cf;
+  line-height: 1.68;
+  margin: 0 auto 18px auto;
+  max-width: 620px;
+  text-wrap: balance;
+  letter-spacing: 0.015em;
+}
+
+/* Sign-off: With love, */
+.royale-scroll__note-signoff {
+  font-family: var(--font-names);
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 600;
+  color: #fae6cf;
+  margin: 24px 0 10px 0;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+/* Couple: PEARL & JATAN */
+.royale-scroll__note-couple {
+  font-family: var(--font-names);
+  font-size: clamp(18px, 2.6vw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5be75;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  margin: 0 0 16px 0;
+}
+
+/* --- 7. Location Section ---------------------------------------------- */
+.ry-location-section {
+  padding: clamp(40px, 6vw, 70px) 24px;
+  background-color: var(--royale-paper);
+  background-image: url("/sites/royale/media/motif_tile.svg");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.ry-location-header {
+  margin-top: 20px;
+  margin-bottom: clamp(24px, 4vw, 36px);
+}
+
+.ry-venue-name {
+  font-family: var(--font-names);
+  font-size: clamp(22px, 3.5vw, 34px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38040f;
+  margin: 14px 0 4px 0;
+}
+
+.ry-venue-loc-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(12px, 1.3vw, 14.5px);
+  font-weight: 500;
+  color: #7a2b3b;
+  margin: 0;
+}
+
+.ry-map-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #fff8ef;
+  border: 1px solid rgba(195, 150, 85, 0.55);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow:
+    0 10px 35px rgba(50, 10, 20, 0.08),
+    inset 0 0 16px rgba(212, 163, 89, 0.1);
+}
+
+.ry-map-preview-link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ry-map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ry-map-preview-link:hover .ry-map-image {
+  transform: scale(1.02);
+}
+
+.ry-map-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.ry-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.ry-btn--primary {
+  background-color: #4a0715;
+  color: #fff6e8;
+  border: 1px solid #731b2c;
+  box-shadow: 0 4px 14px rgba(74, 7, 21, 0.3);
+}
+
+.ry-btn--primary:hover {
+  background-color: #630c1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 7, 21, 0.4);
+}
+
+.ry-btn--outline {
+  background-color: transparent;
+  color: #4a0715;
+  border: 1.5px solid #4a0715;
+}
+
+.ry-btn--outline:hover {
+  background-color: #4a0715;
+  color: #fff6e8;
+  transform: translateY(-2px);
+}
+
+/* --- 8. RSVP Section -------------------------------------------------- */
+.ry-rsvp-section {
+  padding: clamp(30px, 5vw, 60px) 24px clamp(50px, 7vw, 90px);
+  background-color: var(--royale-paper);
+  background-image: url("/sites/royale/media/motif_tile.svg");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+  z-index: 2;
+}
+
+.ry-rsvp-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ry-rsvp-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff8ef;
+  border: 1px solid rgba(195, 150, 85, 0.55);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow:
+    0 10px 35px rgba(50, 10, 20, 0.08),
+    inset 0 0 16px rgba(212, 163, 89, 0.1);
+}
+
+.ry-rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ry-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.ry-form-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c1b28;
+}
+
+.ry-form-input,
+.ry-form-select {
+  width: 100%;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #d5be9f;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: #38040f;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.ry-form-input:focus,
+.ry-form-select:focus {
+  border-color: #8c2438;
+  box-shadow: 0 0 0 3px rgba(140, 36, 56, 0.15);
+}
+
+.ry-rsvp-submit {
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* --- 9. Bottom Maroon Footer ------------------------------------------ */
+.ry-footer {
+  background-color: #2b030c;
+  color: #fff6e8;
+  padding: clamp(40px, 6vw, 70px) 24px clamp(30px, 5vw, 50px);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(212, 163, 89, 0.25);
+}
+
+.ry-footer__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ry-footer__divider {
+  display: block;
+  max-width: 180px;
+  height: auto;
+  opacity: 0.85;
+}
+
+.ry-footer__couple {
+  font-family: var(--font-names);
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--royale-gold);
+  margin: 20px 0 8px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.ry-footer__meta {
+  font-family: var(--font-display);
+  font-size: clamp(11px, 1.4vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e5cdb5;
+  margin: 0 0 16px 0;
+  opacity: 0.9;
+}
+
+.ry-footer__blessing {
+  font-family: var(--font-names);
+  font-style: italic;
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: #f7ebe1;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 0 20px 0;
+  opacity: 0.95;
+}
+
 

@@ -1,212 +1,223 @@
-# Website Content - Pearl & Jatan Wedding Invitation (Updated)
+# Website Content - Pearl & Jatan Destination Wedding Invitation
 
-Updated from the two invitation images (Invitation 1 = traditional card, Invitation 2 = destination poster).
-Items marked **[CONFIRM]** are not in the images and must be filled in or confirmed before going live.
+Structured and styled exactly according to `public/page.pdf`. Unnecessary legacy template sections (e.g., date dials wheel counter, duplicate family placeholders) have been eliminated.
 
 ---
 
-## 1. Opening Cover & Gate (Envelope / Invitation Card)
+## 1. Top Navigation Bar
 
-- **Auspicious Invocation (Mantra):**
-  > શ્રી ગણેશાય નમઃ
-  *(Shri Ganeshaya Namah. Gujarati script is supported by the template and fits a Gujarati family. Devanagari is also fine.)*
-
-- **Guest Greeting (Personalized):**
-  > Mr. Patidar and Family *(dynamic per guest)*
-
-- **Invitation Line:**
-  > Together with their families, we cordially invite you to celebrate the destination wedding of…
-
-- **Call to Action (Plaque):**
-  > Tap to open
+- **Brand:**
+  > Pearl & Jatan
+- **Navigation Links:**
+  - `HOME` (scrolls to Hero)
+  - `CELEBRATION` (scrolls to Celebration highlights)
+  - `VENUE` (scrolls to Chinmay Resort spotlight)
+  - `GALLERY` (scrolls to Moments & Memories)
+  - `CEREMONIES` (scrolls to Wedding Ceremonies)
+  - `LOCATION` (scrolls to Location & Google Maps)
+  - `RSVP` (scrolls to RSVP form)
 
 ---
 
 ## 2. Hero Section
 
 - **The Couple:**
-  > Pearl & Jatan
+  > PEARL & JATAN
 
 - **Tagline:**
-  > Precious Life in the Right Hands.
+  > DESTINATION WEDDING
 
 - **Welcome Line:**
-  > Let's come together and celebrate this occasion.
+  > Together with their families, we invite you to celebrate our special journey.
 
-- **Event Banner:**
-  > Destination Wedding | 15 January – 2 February 2027
-  > Anand, Gujarat & Mandavgarh (Mandu), Madhya Pradesh
+- **Event Dates:**
+  > 15 JANUARY – 03 FEBRUARY 2027
+
+- **Destination:**
+  > MANDAVGARH (MANDU), MADHYA PRADESH
 
 - **Scroll Cue:**
   > Scroll down
 
 ---
 
-## 3. The Families (Scroll Cards)
+## 3. A Celebration to Remember
 
-*Parents' names for the bride and groom are not in the images. Only the hosts are known.*
-
-### Hosts (from Invitation 1)
 - **Heading:**
-  > Hosts
-- **Names:**
-  > Vinubhai Dayabhai Patel
-  > Late Parsottambhai Dayabhai Patel
-  > Vimal and Kanisha Patel (Inside Solution)
-- **Address:**
-  > 14 Mansi Twins, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
+  > A CELEBRATION TO REMEMBER
 
-### Groom's Family
-- **Name:**
-  > Chi. Jatan
-- **Relation:**
-  > Son of
-- **Parents:**
-  > Family Patel
-- **Grandparents (optional):**
-  > —
+- **Description:**
+  > A beautiful gathering of love, family, traditions and togetherness. Join us as we create unforgettable memories in the timeless surroundings of Mandavgarh.
 
-### Bride's Family
-- **Name:**
-  > Kum. Pearl
-- **Relation:**
-  > Daughter of
-- **Parents:**
-  > Family Patel
-- **Grandparents (optional):**
-  > —
+- **Feature Cards (3 Columns):**
+  1. **LOVE & TOGETHERNESS** (Floral sprig ornament)
+  2. **TRADITIONS & CULTURE** (Lotus crest ornament)
+  3. **MEMORIES & CELEBRATIONS** (Royal decorated elephant ornament)
 
 ---
 
-## 4. The Date Reveal Section
+## 4. A Royal Celebration in Mandavgarh / Venue Spotlight
 
-- **Dials / Plaques:** `Date` | `Month` | `Year`
-- **Revealed Date (wedding day):**
-  > Tuesday, 2 February 2027 (02 / 02 / 2027)
-- **Action Buttons & Messages:**
-  - Initial Action: `Reveal the Date`
-  - Post-Reveal Tag: `Save the Date`
-  - Screen Reader Announcement: *"Tuesday, 2 February 2027"*
+- **Eyebrow:**
+  > A ROYAL CELEBRATION IN MANDAVGARH
 
----
+- **Venue Title:**
+  > CHINMAY RESORT
 
-## 5. Our Story in Pictures (Gallery)
+- **Location:**
+  > Mandavgarh (Mandu), Madhya Pradesh
 
-- **Navigation / Gesture Cue:** `Swipe`
-- **Frames (in order):**
-  1. Portrait Photo, caption `#howitstarted`
-  2. Landscape Photo, caption `#adventures`
-  3. Story Card: "Some stories begin with grand gestures. Ours started with a simple conversation."
-  4. Portrait Photo, caption `#thelittlethings`
-  5. Landscape Photo, caption `#everyday`
-  6. Story Card: "Friendship grew into something more, and we realized life's best moments were the ones we shared together."
-  7. Portrait Photo, caption `#foreverbegins`
-  8. Landscape Photo, caption `#usforever`
+- **Description:**
+  > Surrounded by the timeless charm of Mandu, Chinmay Resort will be the setting for our wedding celebrations. We look forward to welcoming our loved ones to share these special moments with us.
+
+- **Featured Visual:**
+  > Marble Palace Pavilion with Fountain and Floral Arches (`pavilion.webp`)
 
 ---
 
-## 6. Ceremonies
+## 5. Moments & Memories (Gallery)
 
-**Section Title:** `Ceremonies`
-
-*(Styled according to the royal design reference with uppercase ceremony title, clean horizontal separator line, uppercase date, and timing note)*
-
-### 1. Kankotri Lekhan
-- **Card Title:** `KANKOTRI LEKHAN`
-- **Date:** `15 JANUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
-
-### 2. Mehndi Ceremony
-- **Card Title:** `MEHNDI CEREMONY`
-- **Date:** `29 JANUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
-
-### 3. Grah Shanti & Reception
-- **Card Title:** `GRAH SHANTI & RECEPTION`
-- **Date:** `30 JANUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Umang Party Plot, near Chikhodra Circle, Anand
-
-### 4. Travel to Mandavgarh
-- **Card Title:** `TRAVEL TO MANDAVGARH`
-- **Date:** `31 JANUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Anand to Mandavgarh (Mandu), Madhya Pradesh
-
-### 5. Haldi Celebration
-- **Card Title:** `HALDI CELEBRATION`
-- **Date:** `01 FEBRUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
-
-### 6. Sangeet Night
-- **Card Title:** `SANGEET NIGHT`
-- **Date:** `01 FEBRUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
-
-### 7. Wedding Ceremony (Vivaah)
-- **Card Title:** `WEDDING CEREMONY`
-- **Date:** `02 FEBRUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
-
-### 8. Departure for Anand
-- **Card Title:** `DEPARTURE FOR ANAND`
-- **Date:** `03 FEBRUARY 2027`
-- **Timing:** `Timing to be announced`
-- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh to Anand, Gujarat
-
----
-
-## 7. Compliments & Note
-
-### With Best Compliments From
 - **Heading:**
-  > With Best Compliments From:
+  > MOMENTS & MEMORIES
+
+- **Subtitle:**
+  > A glimpse into the celebrations, traditions and beautiful moments that make this journey special.
+
+- **Gallery Frames:**
+  - 3D maroon picture frames suspended on twisted cords over a brass rail.
+  - Interactive touch & pointer dragging with `<<< Swipe >>>` cue.
+  - Frames with captions: `#howitstarted`, `#adventures`, `#thelittlethings`, `#everyday`, `#foreverbegins`, `#usforever`, and romantic story cards.
+
+---
+
+## 6. Our Wedding Ceremonies
+
+- **Heading:**
+  > OUR WEDDING CEREMONIES
+
+- **Subtitle:**
+  > From cherished traditions to joyful celebrations, every moment brings us closer together.
+
+- **Ceremony Cards (Arched Indian Palatial Panels):**
+
+  1. **KANKOTRI LEKHAN**
+     - **Date:** 15 JANUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** 14 Mansi Heavens, Bakrol, Anand
+
+  2. **MEHNDI & FAMILY LUNCH**
+     - **Date:** 29 JANUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** 14 Mansi Heavens, Bakrol, Anand
+
+  3. **GRAH SHANTI & RECEPTION**
+     - **Date:** 30 JANUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** Umang Party Plot, near Chikhodra Circle, Anand
+
+  4. **TRAVEL TO MANDAVGARH**
+     - **Date:** 31 JANUARY 2027
+     - **Timing:** Timing to be announced
+     - **Route:** Anand to Mandavgarh (Mandu), Madhya Pradesh
+
+  5. **HALDI POOL CELEBRATION**
+     - **Date:** 01 FEBRUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** Chinmay Resort, Mandavgarh, MP
+
+  6. **SANGEET NIGHT**
+     - **Date:** 01 FEBRUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** Chinmay Resort, Mandavgarh, MP
+
+  7. **HERITAGE TOUR**
+     - **Date:** 02 FEBRUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** Mandavgarh (Mandu), Madhya Pradesh
+
+  8. **GRAND WEDDING CELEBRATION**
+     - **Date:** 02 FEBRUARY 2027
+     - **Timing:** Timing to be announced
+     - **Venue:** Chinmay Resort, Mandavgarh, MP
+
+---
+
+## 7. Compliments & A Note From Us (Scroll Cards)
+
+### Card 1: With Best Compliments From
+- **Heading:**
+  > WITH BEST COMPLIMENTS FROM
 - **Lines:**
-  1. `Vinubhai Dayabhai Patel & Family`
-  2. `Late Parsottambhai Dayabhai Patel & Family`
-  3. `Vimal and Kanisha Patel (Inside Solution)`
+  - Vinubhai Dahyabhai Patel
+  - Late Parsottambhai Dayabhai Patel
+  - Vimal and Kanisha Patel (Inside Solution)
+- **Ornament:** Lotus bloom divider
 
-### A Note From Us
+### Card 2: A Note From Us
 - **Heading:**
-  > A Note From Us
+  > A NOTE FROM US
 - **Message:**
-  > "Your presence will make our celebration truly memorable. Kindly confirm your family's attendance in advance to help us arrange comfortable accommodation and hospitality for everyone."
+  > Dear Family and Friends,
+  >
+  > We are delighted to invite you to be part of our wedding celebrations.
+  >
+  > Your love, blessings and presence mean the world to us. We look forward to sharing beautiful traditions, joyful celebrations and unforgettable memories with everyone who has been part of our journey.
+  >
+  > We cannot wait to celebrate these special moments together in the beautiful surroundings of Mandavgarh.
+  >
+  > With love,
+  > **PEARL & JATAN**
+- **Ornament:** Lotus bloom divider
 
 ---
 
-## 8. Social, Navigation & Calendar Interactions
+## 8. Find Your Way to the Celebration (Location & Maps)
 
-### Interaction Buttons:
-1. **Instagram**
-2. **Ceremony Locations (Map)**
-3. **Add ceremonies to calendar**
+- **Action Buttons:**
+  - Ceremony Locations (Modal listing all venue addresses)
+  - Add to Calendar (Google Calendar, Outlook, Apple Calendar .ics download)
 
-### Modals & Dialogs:
-- **Follow the Couple (Instagram):**
-  - Title: `Follow the Couple`
-  - Prompt: `Would you like to open the couple's Instagram page?`
-  - Actions: `Open Instagram` | `Not now`
-- **Ceremony Locations:**
-  - Title: `Ceremony Locations`
-  - Grouped by place, with Google Maps links:
-    - **Bakrol, Anand:** 14 Mansi Heavens (Kankotri Lekhan, Mehndi)
-    - **Anand:** Umang Party Plot, near Chikhodra Circle (Grah Shanti & Reception)
-    - **Mandavgarh (Mandu), MP:** Chinmay Resort (Haldi, Sangeet, Wedding)
-- **Add to Calendar:**
-  - Title: `Add to Calendar`
-  - Button: `Add all dates`
-  - Options for individual dates: `Google Calendar` | `Outlook` | `Apple Calendar & others` | `← Back to dates`
+- **Heading:**
+  > FIND YOUR WAY TO THE CELEBRATION
+
+- **Venue Name:**
+  > CHINMAY RESORT
+- **Location:**
+  > Mandavgarh (Mandu), Madhya Pradesh
+
+- **Map Preview:**
+  - Interactive card preview linking directly to Google Maps coordinates for Chinmay Resort.
+
+- **Action Buttons:**
+  - `OPEN IN GOOGLE MAPS`
+  - `GET DIRECTIONS`
 
 ---
 
-## 9. Outro & Farewell (Closing Easel)
+## 9. Please Confirm Your Presence (RSVP Form)
 
-- **Guest Greeting:**
-  > Mr. Patidar and Family *(dynamic per guest)*
-- **Farewell Message:**
+- **Heading:**
+  > PLEASE CONFIRM YOUR PRESENCE
+
+- **Form Fields:**
+  - **Full Name:** Text input (`Enter your full name`)
+  - **Phone Number:** Tel input (`Enter your phone number`)
+  - **Number of Guests:** Dropdown selector (`1 Guest`, `2 Guests`, `3 Guests`, `4 Guests`, `5+ Guests`)
+
+- **Submission:**
+  - `SEND VIA WHATSAPP` button
+  - Pre-formats an instant WhatsApp message with all guest details for seamless RSVP confirmation.
+
+---
+
+## 10. Outro Easel & Send-Off
+
+- **Palace Garden Easel Board:**
   > "Your Presence Means the World to Us"
+
+- **Deep Maroon Royal Footer:**
+  - Lotus divider ornament
+  - `PEARL & JATAN`
+  - `15 JANUARY – 03 FEBRUARY 2027 | MANDAVGARH (MANDU), MADHYA PRADESH`
+  - *"Thank you for being part of our beautiful journey. Your presence and blessings make our celebration truly special."*
+  - Lotus divider ornament
