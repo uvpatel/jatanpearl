@@ -171,11 +171,11 @@ export const CELEBRATION_CARDS = [
 
 // ---- Website Texts & Config -----------------------------------------------
 
-export const INVOCATION = "શ્રી ગણેશાય નમઃ";
-export const INVOCATION_LANG = "gu";
+export const INVOCATION = "श्री गणेशाय नमः";
+export const INVOCATION_LANG = "sa";
 export const GUEST_GREETING_DEFAULT = "Mr. Patidar and Family";
 export const INTRO_NOTE =
-  "Together with their families, we cordially invite you to celebrate the destination wedding of…";
+  "we cordially invite you to grace the auspicious occasion of the marriage of…";
 export const HERO_TAGLINE = "DESTINATION WEDDING";
 export const HERO_WELCOME = "Together with their families, we invite you to celebrate our special journey.";
 export const HERO_BANNER_TITLE = "15 JANUARY – 03 FEBRUARY 2027";

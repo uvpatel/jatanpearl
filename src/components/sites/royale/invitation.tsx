@@ -1,10 +1,11 @@
 "use client";
 /* eslint-disable @next/next/no-img-element -- decorative assets sized and positioned by the Royale stylesheet */
 
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState, useSyncExternalStore, type CSSProperties } from "react";
 import {
   initCeremonyCards,
   initGallery,
+  initGate,
   initHeroVideo,
   initOutro,
   initScrollCue,
@@ -21,15 +22,21 @@ import {
   HERO_BANNER_TITLE,
   HERO_TAGLINE,
   HERO_WELCOME,
+  INTRO_NOTE,
+  INVOCATION,
+  INVOCATION_LANG,
   NOTE_SECTIONS,
   OUTRO_MESSAGE,
   VENUE_DETAILS,
   type GalleryFrame,
 } from "./data";
 import { CEREMONY_PANEL } from "./paths";
+import { PlaqueFrame } from "./plaque";
 import { RsvpForm } from "./rsvp-form";
 import { ScrollCard } from "./scroll-card";
 import { Social } from "./social";
+
+const noopSubscribe = () => () => {};
 
 const Tear = ({ pos, lazy = true }: { pos: "top" | "bottom"; lazy?: boolean }) => (
   <img
@@ -89,10 +96,18 @@ const NAV_ITEMS = [
 export function RoyaleInvitation() {
   const [activeSection, setActiveSection] = useState("hero");
 
+  const guest = useSyncExternalStore(
+    noopSubscribe,
+    () => {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("to") || "";
+    },
+    () => "",
+  );
+
   useEffect(() => {
-    // Open invitation gate class automatically
-    document.documentElement.classList.add("is-open");
     const cleanups = [
+      initGate(),
       initHeroVideo(),
       initScrollCue(),
       initGallery(),
@@ -123,6 +138,45 @@ export function RoyaleInvitation() {
 
   return (
     <>
+      {/* The gate: a fixed cover over the hero until it is tapped. */}
+      <div className="royale-gate" id="ryGate" role="button" tabIndex={0} aria-label="Open the invitation">
+        <div className="royale-gate__flap royale-gate__flap--start" aria-hidden="true">
+          <span className="royale-gate__flap-pattern" />
+        </div>
+        <div className="royale-gate__flap royale-gate__flap--end" aria-hidden="true">
+          <span className="royale-gate__flap-pattern" />
+        </div>
+        <div className="royale-gate__door royale-gate__door--start" aria-hidden="true" />
+        <div className="royale-gate__door royale-gate__door--end" aria-hidden="true" />
+
+        {(["sprig-left", "sprig-right"] as const).map((s) => (
+          <div key={s} className={`royale-gate__decor royale-gate__decor--${s}`} aria-hidden="true">
+            <img className="royale-gate__floral" src={`${A}/floral1.png`} alt="" draggable={false} />
+          </div>
+        ))}
+        {(["elephant-left", "elephant-right"] as const).map((s) => (
+          <div key={s} className={`royale-gate__decor royale-gate__decor--${s}`} aria-hidden="true">
+            <img className="royale-gate__elephant" src={`${A}/elephant.png`} alt="" draggable={false} />
+          </div>
+        ))}
+
+        <div className="royale-card">
+          <span className="royale-card__motif" aria-hidden="true" />
+          <span className="royale-card__symbol" aria-hidden="true" />
+          <p className="royale-card__mantra" id="ryInvocation" lang={INVOCATION_LANG}>{INVOCATION}</p>
+          {guest ? (
+            <p className="royale-card__guest" id="ryGuestGreeting">{guest}</p>
+          ) : null}
+          <p className="royale-card__note" id="ryIntroNote">
+            {INTRO_NOTE}
+          </p>
+          <span className="royale-card__cue ry-plaque" aria-hidden="true">
+            <PlaqueFrame idPrefix="ryCue" />
+            <span className="ry-plaque__label">Tap to open</span>
+          </span>
+        </div>
+      </div>
+
       {/* 1. Top Navbar */}
       <header className="ry-navbar">
         <div className="ry-navbar__inner">
