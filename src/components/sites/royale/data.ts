@@ -4,12 +4,12 @@ export const A = "/sites/royale/media";
 
 export interface Ceremony {
   name: string;
-  sub?: string;
   art: string;
+  dateUpper: string; // e.g. "01 FEBRUARY 2027"
+  timingLine: string; // e.g. "Timing to be announced"
   dateStr: string; // e.g. "Fri, 15 Jan 2027"
   isoDate: string; // "2027-01-15"
   time: string; // "10:00"
-  timeDisplay: string; // "Morning", "11:00 AM", "6:30 PM", etc.
   venue: string;
   city?: string;
   fullAddress: string;
@@ -18,96 +18,96 @@ export interface Ceremony {
 export const CEREMONIES: Ceremony[] = [
   {
     name: "Kankotri Lekhan",
-    sub: "Auspicious Invitation Writing",
     art: "ring_ceremony.webp",
+    dateUpper: "15 JANUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Fri, 15 Jan 2027",
     isoDate: "2027-01-15",
     time: "10:00",
-    timeDisplay: "Morning",
     venue: "14 Mansi Heavens",
     city: "Bakrol, Anand",
     fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
     name: "Mehndi Ceremony",
-    sub: "Family Lunch & Henna",
     art: "mehendi.webp",
+    dateUpper: "29 JANUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Fri, 29 Jan 2027",
     isoDate: "2027-01-29",
     time: "11:00",
-    timeDisplay: "11:00 AM",
     venue: "14 Mansi Heavens",
     city: "Bakrol, Anand",
     fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
-    name: "Grah Shanti",
-    sub: "Reception Dinner",
+    name: "Grah Shanti & Reception",
     art: "reception.webp",
+    dateUpper: "30 JANUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Sat, 30 Jan 2027",
     isoDate: "2027-01-30",
     time: "18:30",
-    timeDisplay: "6:30 PM",
     venue: "Umang Party Plot",
     city: "Near Chikhodra Circle, Anand",
     fullAddress: "Umang Party Plot, near Chikhodra Circle, Anand",
   },
   {
     name: "Travel to Mandavgarh",
-    sub: "Departure by Bus & Car",
     art: "pavilion.webp",
+    dateUpper: "31 JANUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Sun, 31 Jan 2027",
     isoDate: "2027-01-31",
     time: "08:00",
-    timeDisplay: "Morning Departure",
     venue: "Anand to Mandavgarh",
     city: "Mandu, Madhya Pradesh",
     fullAddress: "Anand to Mandavgarh (Mandu), Madhya Pradesh",
   },
   {
     name: "Haldi Celebration",
-    sub: "Poolside Celebration",
     art: "haldi.webp",
+    dateUpper: "01 FEBRUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Mon, 1 Feb 2027",
     isoDate: "2027-02-01",
     time: "10:00",
-    timeDisplay: "10:00 AM",
     venue: "Chinmay Resort",
     city: "Mandavgarh (Mandu), MP",
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
     name: "Sangeet Night",
-    sub: "Musical Evening & Dinner",
     art: "sangeet.webp",
+    dateUpper: "01 FEBRUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Mon, 1 Feb 2027",
     isoDate: "2027-02-01",
     time: "19:00",
-    timeDisplay: "7:00 PM",
     venue: "Chinmay Resort",
     city: "Mandavgarh (Mandu), MP",
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
     name: "Wedding Ceremony",
-    sub: "Heritage Tour & Vivaah Muhurat",
     art: "vivaah.webp",
+    dateUpper: "02 FEBRUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Tue, 2 Feb 2027",
     isoDate: "2027-02-02",
     time: "11:00",
-    timeDisplay: "11:00 AM onwards",
     venue: "Chinmay Resort",
     city: "Mandavgarh (Mandu), MP",
     fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
     name: "Departure for Anand",
-    sub: "Farewell after Breakfast",
     art: "lotus_bunch.png",
+    dateUpper: "03 FEBRUARY 2027",
+    timingLine: "Timing to be announced",
     dateStr: "Wed, 3 Feb 2027",
     isoDate: "2027-02-03",
     time: "09:00",
-    timeDisplay: "Morning",
     venue: "Chinmay Resort to Anand",
     city: "Return to Gujarat",
     fullAddress: "Chinmay Resort, Mandavgarh to Anand, Gujarat",
@@ -190,7 +190,7 @@ export const INVOCATION_LANG = "gu";
 export const GUEST_GREETING_DEFAULT = "Mr. Patidar and Family";
 export const INTRO_NOTE =
   "Together with their families, we cordially invite you to celebrate the destination wedding of…";
-export const HERO_TAGLINE = "Precious Life in the Right Hands.";
+
 export const HERO_WELCOME = "Let's come together and celebrate this occasion.";
 export const HERO_BANNER_TITLE = "Destination Wedding • 15 January – 2 February 2027";
 export const HERO_BANNER_LOC = "Anand, Gujarat & Mandavgarh (Mandu), Madhya Pradesh";

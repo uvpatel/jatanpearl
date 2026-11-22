@@ -109,61 +109,55 @@ Items marked **[CONFIRM]** are not in the images and must be filled in or confir
 
 **Section Title:** `Ceremonies`
 
+*(Styled according to the royal design reference with uppercase ceremony title, clean horizontal separator line, uppercase date, and timing note)*
+
 ### 1. Kankotri Lekhan
-- **Subtitle:** Auspicious Invitation Writing
-- **Date:** Friday, 15 January 2027
-- **Time:** Morning
-- **Venue:** 14 Mansi Heavens, Bakrol, Anand
-- **Full Address:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
+- **Card Title:** `KANKOTRI LEKHAN`
+- **Date:** `15 JANUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
 
 ### 2. Mehndi Ceremony
-- **Subtitle:** Family Lunch & Henna
-- **Date:** Friday, 29 January 2027
-- **Time:** 11:00 AM
-- **Venue:** 14 Mansi Heavens, Bakrol, Anand
-- **Full Address:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
+- **Card Title:** `MEHNDI CEREMONY`
+- **Date:** `29 JANUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
 
-### 3. Grah Shanti
-- **Subtitle:** Reception Dinner
-- **Date:** Saturday, 30 January 2027
-- **Time:** 6:30 PM
-- **Venue:** Umang Party Plot, Anand
-- **Full Address:** Umang Party Plot, near Chikhodra Circle, Anand
+### 3. Grah Shanti & Reception
+- **Card Title:** `GRAH SHANTI & RECEPTION`
+- **Date:** `30 JANUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Umang Party Plot, near Chikhodra Circle, Anand
 
 ### 4. Travel to Mandavgarh
-- **Subtitle:** Departure by Bus & Car
-- **Date:** Sunday, 31 January 2027
-- **Time:** Morning Departure
-- **Venue:** Anand to Mandavgarh (Mandu)
-- **Full Address:** Anand to Mandavgarh (Mandu), Madhya Pradesh
+- **Card Title:** `TRAVEL TO MANDAVGARH`
+- **Date:** `31 JANUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Anand to Mandavgarh (Mandu), Madhya Pradesh
 
 ### 5. Haldi Celebration
-- **Subtitle:** Poolside Celebration
-- **Date:** Monday, 1 February 2027
-- **Time:** 10:00 AM
-- **Venue:** Chinmay Resort, Mandavgarh
-- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Card Title:** `HALDI CELEBRATION`
+- **Date:** `01 FEBRUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
 ### 6. Sangeet Night
-- **Subtitle:** Musical Evening & Dinner
-- **Date:** Monday, 1 February 2027
-- **Time:** 7:00 PM
-- **Venue:** Chinmay Resort, Mandavgarh
-- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Card Title:** `SANGEET NIGHT`
+- **Date:** `01 FEBRUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
 ### 7. Wedding Ceremony (Vivaah)
-- **Subtitle:** Heritage Tour & Vivaah Muhurat
-- **Date:** Tuesday, 2 February 2027
-- **Time:** 11:00 AM onwards
-- **Venue:** Chinmay Resort, Mandavgarh
-- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Card Title:** `WEDDING CEREMONY`
+- **Date:** `02 FEBRUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
 ### 8. Departure for Anand
-- **Subtitle:** Farewell after Breakfast
-- **Date:** Wednesday, 3 February 2027
-- **Time:** Morning
-- **Venue:** Chinmay Resort to Anand
-- **Full Address:** Chinmay Resort, Mandavgarh to Anand, Gujarat
+- **Card Title:** `DEPARTURE FOR ANAND`
+- **Date:** `03 FEBRUARY 2027`
+- **Timing:** `Timing to be announced`
+- **Venue / Address (for map & calendar):** Chinmay Resort, Mandavgarh to Anand, Gujarat
 
 ---
 

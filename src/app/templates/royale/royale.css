@@ -2244,7 +2244,7 @@ body::before {
   }
 }
 
-/* The cream panel inside the card's border, holding the artwork and the details. */
+/* The cream panel inside the card's border, holding the artwork and content. */
 .ryc-card__inner {
   position: absolute;
   inset: 6% 10.5% 8.7%;
@@ -2262,179 +2262,75 @@ body::before {
   z-index: 1;
 }
 
-/* Each illustration fitted into the upper region under the arch:
-   taller illustrations stay within the top 44% and centre across it,
-   leaving ample breathing space above the text below. */
+/* Artwork placed within the upper arch dome, ending gracefully around 52% */
 .ryc-card__art {
   position: absolute;
-  top: 7%;
+  top: 6%;
   left: 50%;
-  width: 70%;
-  height: 37%;
+  width: 74%;
+  height: 46%;
   object-fit: contain;
   transform: translateX(-50%);
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* The content body strictly occupies the area from 46% down to the base.
-   This guarantees the heading and details never collide with the artwork. */
-.ryc-card__body {
+/* The content block occupies the lower half of the card, centered with generous padding */
+.ryc-card__content {
   position: absolute;
-  top: 46%;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 55%;
+  bottom: 6%;
+  left: 6%;
+  right: 6%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 2px 6% 6%;
+  justify-content: center;
   text-align: center;
   z-index: 2;
 }
 
-.ryc-card__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.ryc-card__name {
+/* Ceremony title in ALL CAPS bold serif */
+.ryc-card__title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(15px, 4.8cqw, 20px);
-  font-weight: 600;
-  line-height: 1.18;
-  color: var(--royale-ceremony-ink);
+  font-family: var(--font-names);
+  font-size: clamp(17px, 5.6cqw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38040f;
+  line-height: 1.2;
   text-wrap: balance;
 }
 
-.ryc-card__sub {
-  margin: 2px 0 0;
-  font-family: var(--font-names);
-  font-size: clamp(11px, 3.2cqw, 13px);
-  font-style: italic;
-  font-weight: 500;
-  color: var(--royale-crimson);
-  opacity: 0.95;
-  line-height: 1.2;
+/* Subtle elegant horizontal divider */
+.ryc-card__separator {
+  width: 72%;
+  height: 1px;
+  background-color: rgba(90, 20, 35, 0.28);
+  margin: clamp(12px, 3.8cqw, 20px) auto;
 }
 
-/* The venue, date and time are set in Sora, against the name's Fraunces. */
-.ryc-card__foot {
-  width: 100%;
-  text-align: left;
-  font-family: var(--font-sans);
-  margin-top: auto;
-}
-
-.ryc-card__where {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3%;
-  width: 100%;
-}
-
-.ryc-card__loc {
-  flex: 1;
-  min-width: 0;
-}
-
-.ryc-card__venue {
+/* Event date in ALL CAPS bold */
+.ryc-card__date-line {
   margin: 0;
-  font-size: clamp(12px, 3.8cqw, 15px);
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--royale-ceremony-ink);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ryc-card__city {
-  margin: 2px 0 0;
-  font-size: clamp(10px, 3.1cqw, 12px);
-  color: var(--royale-ceremony-ink);
-  opacity: 0.8;
+  font-family: var(--font-names);
+  font-size: clamp(14px, 4.4cqw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #420815;
   line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* media/location.svg is the whole button */
-.ryc-card__map {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(28px, 9.5cqw, 36px);
-  height: clamp(28px, 9.5cqw, 36px);
-  border-radius: 12%;
-  transition: transform 0.2s ease;
-}
-
-.ryc-card__map:hover {
-  transform: scale(1.08);
-}
-
-.ryc-card__map img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  animation: ry-pin-bob 2.4s ease-in-out infinite;
-}
-
-@keyframes ry-pin-bob {
-  0%,
-  20%,
-  100% {
-    transform: translateY(0);
-  }
-
-  10% {
-    transform: translateY(-3%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ryc-card__map img {
-    animation: none;
-  }
-}
-
-.ryc-card__map:focus-visible {
-  outline: 2px solid var(--royale-ceremony-ink);
-  outline-offset: 2px;
-}
-
-.ryc-card__when {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4%;
-  margin: 6px 0 0;
-  padding-top: 6px;
-  border-top: max(1px, 0.25cqw) solid rgb(64 8 11 / 0.25);
-  font-size: clamp(11px, 3.6cqw, 13.5px);
-  font-weight: 600;
-  color: var(--royale-ceremony-ink);
-}
-
-.ryc-card__date {
-  letter-spacing: -0.01em;
-}
-
-.ryc-card__time {
-  font-size: clamp(10px, 3.1cqw, 12px);
-  opacity: 0.85;
+/* Timing line */
+.ryc-card__timing-line {
+  margin: clamp(4px, 1.4cqw, 8px) 0 0;
+  font-family: var(--font-sans);
+  font-size: clamp(12px, 3.4cqw, 14.5px);
   font-weight: 500;
-  white-space: nowrap;
+  color: #692330;
+  line-height: 1.25;
 }
 
 /* Each card rises into place the first time it is reached, the way the

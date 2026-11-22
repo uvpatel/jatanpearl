@@ -24,7 +24,7 @@ import {
   GUEST_GREETING_DEFAULT,
   HERO_BANNER_LOC,
   HERO_BANNER_TITLE,
-  HERO_TAGLINE,
+ 
   HERO_WELCOME,
   INTRO_NOTE,
   INVOCATION,
@@ -32,7 +32,6 @@ import {
   NOTE,
   OUTRO_MESSAGE,
   WEDDING_DATE,
-  mapLink,
   type GalleryFrame,
 } from "./data";
 import { CEREMONY_PANEL } from "./paths";
@@ -180,12 +179,9 @@ export function RoyaleInvitation() {
           </h1>
 
           <div className="royale-hero__sub">
-            <p className="royale-hero__tagline">{HERO_TAGLINE}</p>
-            <p className="royale-hero__welcome">{HERO_WELCOME}</p>
-            <div className="royale-hero__banner">
-              <span className="royale-hero__banner-title">{HERO_BANNER_TITLE}</span>
-              <span className="royale-hero__banner-loc">{HERO_BANNER_LOC}</span>
-            </div>
+
+
+           
           </div>
         </div>
         <Tear pos="bottom" lazy={false} />
@@ -289,32 +285,11 @@ export function RoyaleInvitation() {
                   <div className="ryc-card__artwell">
                     <img className="ryc-card__art" src={`${A}/${c.art}`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
                   </div>
-                  <div className="ryc-card__body">
-                    <div className="ryc-card__header">
-                      <h3 className="ryc-card__name">{c.name}</h3>
-                      {c.sub && <p className="ryc-card__sub">{c.sub}</p>}
-                    </div>
-                    <div className="ryc-card__foot">
-                      <div className="ryc-card__where">
-                        <div className="ryc-card__loc">
-                          <p className="ryc-card__venue">{c.venue}</p>
-                          {c.city && <p className="ryc-card__city">{c.city}</p>}
-                        </div>
-                        <a
-                          className="ryc-card__map"
-                          href={mapLink(c.fullAddress || c.venue)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${c.name} venue on the map`}
-                        >
-                          <img src={`${A}/location.svg`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                        </a>
-                      </div>
-                      <p className="ryc-card__when">
-                        <span className="ryc-card__date">{c.dateStr}</span>
-                        <span className="ryc-card__time">{c.timeDisplay}</span>
-                      </p>
-                    </div>
+                  <div className="ryc-card__content">
+                    <h3 className="ryc-card__title">{c.name}</h3>
+                    <div className="ryc-card__separator" aria-hidden="true" />
+                    <p className="ryc-card__date-line">{c.dateUpper}</p>
+                    <p className="ryc-card__timing-line">{c.timingLine}</p>
                   </div>
                 </div>
               </article>

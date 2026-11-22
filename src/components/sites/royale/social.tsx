@@ -94,7 +94,7 @@ export function Social() {
       const date = c.isoDate;
       let day = out.find((x) => x.date === date);
       if (!day) out.push((day = { date, label: c.dateStr, list: [] }));
-      day.list.push({ name: c.name, time: c.timeDisplay, venue: c.venue });
+      day.list.push({ name: c.name, time: c.timingLine || c.time, venue: c.venue });
     });
     return out;
   }, []);
