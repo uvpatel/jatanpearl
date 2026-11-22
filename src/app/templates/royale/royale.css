@@ -2244,116 +2244,88 @@ body::before {
   }
 }
 
-/* The cream panel inside the card's border, holding the name and the details.
-   The illustration is not in here - it sits in its own well below, over the
-   whole card - so this box starts where the writing does. */
+/* The cream panel inside the card's border, holding the artwork and the details. */
 .ryc-card__inner {
   position: absolute;
   inset: 6% 10.5% 8.7%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  /* The design's gap between the name and the details below it. */
-  gap: 8cqw;
-  padding: 0 4% 4%;
-  text-align: center;
+  display: block;
   color: var(--royale-ceremony-ink);
+  overflow: hidden;
 }
 
-/* The illustrations differ: some taper at the top and nest under the arch,
-   others (the vivaah and reception scenes) are wide rectangles that never
-   could. So the well spans the whole card and is clipped to the card's own
-   panel shape (the clipPath in index.html), which keeps every one of them
-   inside the arch however it is drawn - wide ones simply meet the curve. */
+/* The well spans the top portion of the card and is clipped to the card's own
+   arch panel shape. Height is locked to 46% so the artwork never infringes
+   on the text area below. */
 .ryc-card__artwell {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
   clip-path: url(#ryCeremonyPanel);
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Each illustration fitted, whole, into one region under the arch - 74% of
-   the panel wide, from 8% to 62% of its height - rather than all set to one
-   width: they are drawn to different shapes, and at the size the design
-   gives the mehendi scene a width alone would drop the taller ones (the
-   reception) onto the name. All six are taller than the region is, so each
-   fills its height and centres across it. */
+/* Each illustration fitted into the upper region under the arch:
+   taller illustrations stay within the top 48% and centre across it. */
 .ryc-card__art {
   position: absolute;
-  top: 8%;
+  top: 6%;
   left: 50%;
-  width: 74%;
-  height: 54%;
+  width: 76%;
+  height: 88%;
   object-fit: contain;
   transform: translateX(-50%);
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* A ceremony the couple added, with their own photo in place of artwork.
-   The photo fills the arch: this box is the whole card, cut to the cream
-   panel inside its border by the same #ryCeremonyPanel the illustrations'
-   well uses, so the photo meets the card's own inner edge with no frame of
-   its own. Above the writing panel, which covers the whole card, so the
-   photo can take the editor's tap - but only the photo: the rest of this box
-   lets taps through to the fields below it. */
-.ryc-card__photo {
-  /* Down to 54% of the card, a straight edge just above the name (which
-     starts at 57.6%). */
-  --photo-h: 46.8%;
-
+/* The content body strictly occupies the area from 48% down to the base.
+   This guarantees the heading and details never collide with the artwork. */
+.ryc-card__body {
   position: absolute;
-  z-index: 1;
-  inset: 0;
-  clip-path: url(#ryCeremonyPanel);
-  pointer-events: none;
-}
-
-/* The photo's own area: from the top of the panel (x 10.5%-89.5%, from 7.2%
-   down, in #ryCeremonyPanel's terms) to --photo-h below it. The frame its
-   picture is zoomed and placed in (frameImage in render.js), and what crops
-   it. */
-.ryc-card__photo-box {
-  position: absolute;
-  top: 7.16%;
-  left: 10.52%;
-  width: 78.97%;
-  height: var(--photo-h);
-  overflow: hidden;
-}
-
-/* As .gframe__img: the starting point only, until frameImage() sizes the
-   picture from its own proportions and the host's zoom and offsets it. Pinned
-   to the top-left for the same reason, and max-* undone because a zoomed
-   picture is deliberately larger than its area. */
-.ryc-card__photo-img {
-  position: absolute;
-  top: 0;
+  top: 48%;
+  bottom: 0;
   left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
-  object-fit: cover;
-  user-select: none;
-  -webkit-user-drag: none;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6% 6%;
+  text-align: center;
+  z-index: 2;
 }
 
-.ryc-defs {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+.ryc-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2px;
 }
 
 .ryc-card__name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 8cqw;
+  font-size: clamp(16px, 5.2cqw, 22px);
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.18;
+  color: var(--royale-ceremony-ink);
+  text-wrap: balance;
+}
+
+.ryc-card__sub {
+  margin: 2px 0 0;
+  font-family: var(--font-names);
+  font-size: clamp(11px, 3.4cqw, 13px);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--royale-crimson);
+  opacity: 0.95;
+  line-height: 1.2;
 }
 
 /* The venue, date and time are set in Sora, against the name's Fraunces. */
@@ -2361,43 +2333,65 @@ body::before {
   width: 100%;
   text-align: left;
   font-family: var(--font-sans);
+  margin-top: auto;
 }
 
 .ryc-card__where {
   display: flex;
   align-items: center;
-  gap: 4%;
+  justify-content: space-between;
+  gap: 3%;
+  width: 100%;
+}
+
+.ryc-card__loc {
+  flex: 1;
+  min-width: 0;
 }
 
 .ryc-card__venue {
-  flex: 1;
   margin: 0;
-  font-size: 5cqw;
-  font-weight: 500;
+  font-size: clamp(12px, 3.8cqw, 15px);
+  font-weight: 600;
   line-height: 1.25;
+  color: var(--royale-ceremony-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* media/location.svg is the whole button - its outlined square and the pin
-   inside it - drawn in a 59px box whose square is 39px of it, so 13.5cqw
-   here puts that square at the 9cqw the design has it. */
+.ryc-card__city {
+  margin: 2px 0 0;
+  font-size: clamp(10px, 3.1cqw, 12px);
+  color: var(--royale-ceremony-ink);
+  opacity: 0.8;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* media/location.svg is the whole button */
 .ryc-card__map {
   flex: none;
-  display: block;
-  width: 13.5cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(28px, 9.5cqw, 36px);
+  height: clamp(28px, 9.5cqw, 36px);
   border-radius: 12%;
+  transition: transform 0.2s ease;
+}
+
+.ryc-card__map:hover {
+  transform: scale(1.08);
 }
 
 .ryc-card__map img {
   display: block;
   width: 100%;
-  height: auto;
-}
-
-/* The pin hops very slightly, now and then, to say it can be tapped: a 3%
-   rise and settle in the first fifth of a 2.4s cycle, still for the rest.
-   On the picture, not the link, so the tap target and its focus ring keep
-   still. Off with reduced motion. */
-.ryc-card__map img {
+  height: 100%;
+  object-fit: contain;
   animation: ry-pin-bob 2.4s ease-in-out infinite;
 }
 
@@ -2429,16 +2423,23 @@ body::before {
   align-items: baseline;
   justify-content: space-between;
   gap: 4%;
-  margin: 4% 0 0;
-  padding-top: 4%;
-  border-top: max(1px, 0.25cqw) solid rgb(64 8 11 / 0.35);
-  font-size: 4.6cqw;
-  font-weight: 500;
+  margin: 6px 0 0;
+  padding-top: 6px;
+  border-top: max(1px, 0.25cqw) solid rgb(64 8 11 / 0.25);
+  font-size: clamp(11px, 3.6cqw, 13.5px);
+  font-weight: 600;
+  color: var(--royale-ceremony-ink);
+}
+
+.ryc-card__date {
+  letter-spacing: -0.01em;
 }
 
 .ryc-card__time {
-  font-size: 3cqw;
-  opacity: 0.8;
+  font-size: clamp(10px, 3.1cqw, 12px);
+  opacity: 0.85;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Each card rises into place the first time it is reached, the way the

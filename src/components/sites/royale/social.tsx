@@ -102,10 +102,10 @@ export function Social() {
   const locations = useMemo(() => {
     const out: { venue: string; rest: string; address: string; names: string[] }[] = [];
     CEREMONIES.forEach((c) => {
-      let l = out.find((x) => x.address === c.venue);
+      const addr = c.fullAddress || c.venue;
+      let l = out.find((x) => x.address === addr);
       if (!l) {
-        const [first, ...rest] = c.venue.split(",");
-        out.push((l = { venue: first.trim(), rest: rest.join(",").trim(), address: c.venue, names: [] }));
+        out.push((l = { venue: c.venue, rest: c.city || "", address: addr, names: [] }));
       }
       l.names.push(c.name);
     });

@@ -110,46 +110,60 @@ Items marked **[CONFIRM]** are not in the images and must be filled in or confir
 **Section Title:** `Ceremonies`
 
 ### 1. Kankotri Lekhan
+- **Subtitle:** Auspicious Invitation Writing
 - **Date:** Friday, 15 January 2027
 - **Time:** Morning
-- **Venue:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
+- **Venue:** 14 Mansi Heavens, Bakrol, Anand
+- **Full Address:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
 
-### 2. Mehndi Ceremony & Family Lunch
+### 2. Mehndi Ceremony
+- **Subtitle:** Family Lunch & Henna
 - **Date:** Friday, 29 January 2027
 - **Time:** 11:00 AM
-- **Venue:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
+- **Venue:** 14 Mansi Heavens, Bakrol, Anand
+- **Full Address:** 14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315
 
-### 3. Grah Shanti & Reception Dinner
+### 3. Grah Shanti
+- **Subtitle:** Reception Dinner
 - **Date:** Saturday, 30 January 2027
 - **Time:** 6:30 PM
-- **Venue:** Umang Party Plot, near Chikhodra Circle, Anand
+- **Venue:** Umang Party Plot, Anand
+- **Full Address:** Umang Party Plot, near Chikhodra Circle, Anand
 
 ### 4. Travel to Mandavgarh
+- **Subtitle:** Departure by Bus & Car
 - **Date:** Sunday, 31 January 2027
 - **Time:** Morning Departure
-- **Venue:** Anand to Mandavgarh (Mandu), Madhya Pradesh
-- **Details:** Guests travel from Anand to Mandavgarh (Mandu), Madhya Pradesh, by bus and car.
+- **Venue:** Anand to Mandavgarh (Mandu)
+- **Full Address:** Anand to Mandavgarh (Mandu), Madhya Pradesh
 
-### 5. Haldi (Pool Celebration)
+### 5. Haldi Celebration
+- **Subtitle:** Poolside Celebration
 - **Date:** Monday, 1 February 2027
 - **Time:** 10:00 AM
-- **Venue:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Venue:** Chinmay Resort, Mandavgarh
+- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
 ### 6. Sangeet Night
+- **Subtitle:** Musical Evening & Dinner
 - **Date:** Monday, 1 February 2027
 - **Time:** 7:00 PM
-- **Venue:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Venue:** Chinmay Resort, Mandavgarh
+- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
-### 7. Heritage Tour & Wedding Ceremony (Vivaah)
+### 7. Wedding Ceremony (Vivaah)
+- **Subtitle:** Heritage Tour & Vivaah Muhurat
 - **Date:** Tuesday, 2 February 2027
-- **Time:** 11:00 AM onwards (Wedding Muhurat)
-- **Venue:** Chinmay Resort, Mandavgarh, Madhya Pradesh
+- **Time:** 11:00 AM onwards
+- **Venue:** Chinmay Resort, Mandavgarh
+- **Full Address:** Chinmay Resort, Mandavgarh, Madhya Pradesh
 
 ### 8. Departure for Anand
+- **Subtitle:** Farewell after Breakfast
 - **Date:** Wednesday, 3 February 2027
 - **Time:** Morning
-- **Venue:** Chinmay Resort, Mandavgarh to Anand
-- **Details:** Departure for Anand after breakfast.
+- **Venue:** Chinmay Resort to Anand
+- **Full Address:** Chinmay Resort, Mandavgarh to Anand, Gujarat
 
 ---
 

@@ -289,23 +289,32 @@ export function RoyaleInvitation() {
                   <div className="ryc-card__artwell">
                     <img className="ryc-card__art" src={`${A}/${c.art}`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
                   </div>
-                  <h3 className="ryc-card__name">{c.name}</h3>
-                  {c.details && (
-                    <p className="ryc-card__details" style={{ fontSize: "0.85rem", fontStyle: "italic", opacity: 0.85, margin: "4px 16px 0", textAlign: "center" }}>
-                      {c.details}
-                    </p>
-                  )}
-                  <div className="ryc-card__foot">
-                    <div className="ryc-card__where">
-                      <p className="ryc-card__venue">{c.venue}</p>
-                      <a className="ryc-card__map" href={mapLink(c.venue)} target="_blank" rel="noopener noreferrer" aria-label={`${c.name} venue on the map`}>
-                        <img src={`${A}/location.svg`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
-                      </a>
+                  <div className="ryc-card__body">
+                    <div className="ryc-card__header">
+                      <h3 className="ryc-card__name">{c.name}</h3>
+                      {c.sub && <p className="ryc-card__sub">{c.sub}</p>}
                     </div>
-                    <p className="ryc-card__when">
-                      <span className="ryc-card__date">{c.dateStr}</span>
-                      <span className="ryc-card__time">{c.timeDisplay}</span>
-                    </p>
+                    <div className="ryc-card__foot">
+                      <div className="ryc-card__where">
+                        <div className="ryc-card__loc">
+                          <p className="ryc-card__venue">{c.venue}</p>
+                          {c.city && <p className="ryc-card__city">{c.city}</p>}
+                        </div>
+                        <a
+                          className="ryc-card__map"
+                          href={mapLink(c.fullAddress || c.venue)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${c.name} venue on the map`}
+                        >
+                          <img src={`${A}/location.svg`} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                        </a>
+                      </div>
+                      <p className="ryc-card__when">
+                        <span className="ryc-card__date">{c.dateStr}</span>
+                        <span className="ryc-card__time">{c.timeDisplay}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </article>

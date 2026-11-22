@@ -4,99 +4,113 @@ export const A = "/sites/royale/media";
 
 export interface Ceremony {
   name: string;
+  sub?: string;
   art: string;
   dateStr: string; // e.g. "Fri, 15 Jan 2027"
   isoDate: string; // "2027-01-15"
   time: string; // "10:00"
   timeDisplay: string; // "Morning", "11:00 AM", "6:30 PM", etc.
   venue: string;
-  details?: string;
-  cityGroup?: string;
+  city?: string;
+  fullAddress: string;
 }
 
 export const CEREMONIES: Ceremony[] = [
   {
     name: "Kankotri Lekhan",
+    sub: "Auspicious Invitation Writing",
     art: "ring_ceremony.webp",
     dateStr: "Fri, 15 Jan 2027",
     isoDate: "2027-01-15",
     time: "10:00",
     timeDisplay: "Morning",
-    venue: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
-    cityGroup: "Bakrol, Anand",
+    venue: "14 Mansi Heavens",
+    city: "Bakrol, Anand",
+    fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
-    name: "Mehndi Ceremony & Family Lunch",
+    name: "Mehndi Ceremony",
+    sub: "Family Lunch & Henna",
     art: "mehendi.webp",
     dateStr: "Fri, 29 Jan 2027",
     isoDate: "2027-01-29",
     time: "11:00",
     timeDisplay: "11:00 AM",
-    venue: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
-    cityGroup: "Bakrol, Anand",
+    venue: "14 Mansi Heavens",
+    city: "Bakrol, Anand",
+    fullAddress: "14 Mansi Heavens, behind Recharge Café, Bakrol–Vadtal Road, Bakrol, Anand 388315",
   },
   {
-    name: "Grah Shanti & Reception Dinner",
+    name: "Grah Shanti",
+    sub: "Reception Dinner",
     art: "reception.webp",
     dateStr: "Sat, 30 Jan 2027",
     isoDate: "2027-01-30",
     time: "18:30",
     timeDisplay: "6:30 PM",
-    venue: "Umang Party Plot, near Chikhodra Circle, Anand",
-    cityGroup: "Anand",
+    venue: "Umang Party Plot",
+    city: "Near Chikhodra Circle, Anand",
+    fullAddress: "Umang Party Plot, near Chikhodra Circle, Anand",
   },
   {
     name: "Travel to Mandavgarh",
+    sub: "Departure by Bus & Car",
     art: "pavilion.webp",
     dateStr: "Sun, 31 Jan 2027",
     isoDate: "2027-01-31",
     time: "08:00",
     timeDisplay: "Morning Departure",
-    venue: "Anand to Mandavgarh (Mandu), Madhya Pradesh",
-    details: "Guests travel from Anand to Mandavgarh (Mandu), Madhya Pradesh, by bus and car.",
-    cityGroup: "Travel",
+    venue: "Anand to Mandavgarh",
+    city: "Mandu, Madhya Pradesh",
+    fullAddress: "Anand to Mandavgarh (Mandu), Madhya Pradesh",
   },
   {
-    name: "Haldi (Pool Celebration)",
+    name: "Haldi Celebration",
+    sub: "Poolside Celebration",
     art: "haldi.webp",
     dateStr: "Mon, 1 Feb 2027",
     isoDate: "2027-02-01",
     time: "10:00",
     timeDisplay: "10:00 AM",
-    venue: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
-    cityGroup: "Mandavgarh (Mandu), MP",
+    venue: "Chinmay Resort",
+    city: "Mandavgarh (Mandu), MP",
+    fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
     name: "Sangeet Night",
+    sub: "Musical Evening & Dinner",
     art: "sangeet.webp",
     dateStr: "Mon, 1 Feb 2027",
     isoDate: "2027-02-01",
     time: "19:00",
     timeDisplay: "7:00 PM",
-    venue: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
-    cityGroup: "Mandavgarh (Mandu), MP",
+    venue: "Chinmay Resort",
+    city: "Mandavgarh (Mandu), MP",
+    fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
-    name: "Heritage Tour & Wedding Ceremony",
+    name: "Wedding Ceremony",
+    sub: "Heritage Tour & Vivaah Muhurat",
     art: "vivaah.webp",
     dateStr: "Tue, 2 Feb 2027",
     isoDate: "2027-02-02",
     time: "11:00",
-    timeDisplay: "11:00 AM onwards (Vivaah)",
-    venue: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
-    details: "Heritage Tour & Wedding Muhurat",
-    cityGroup: "Mandavgarh (Mandu), MP",
+    timeDisplay: "11:00 AM onwards",
+    venue: "Chinmay Resort",
+    city: "Mandavgarh (Mandu), MP",
+    fullAddress: "Chinmay Resort, Mandavgarh, Madhya Pradesh",
   },
   {
     name: "Departure for Anand",
-    art: "garden_close_tall.webp",
+    sub: "Farewell after Breakfast",
+    art: "lotus_bunch.png",
     dateStr: "Wed, 3 Feb 2027",
     isoDate: "2027-02-03",
     time: "09:00",
     timeDisplay: "Morning",
-    venue: "Chinmay Resort, Mandavgarh to Anand",
-    details: "Departure for Anand after breakfast.",
-    cityGroup: "Departure",
+    venue: "Chinmay Resort to Anand",
+    city: "Return to Gujarat",
+    fullAddress: "Chinmay Resort, Mandavgarh to Anand, Gujarat",
   },
 ];
 
