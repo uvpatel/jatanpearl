@@ -19,6 +19,7 @@ export function RsvpForm() {
     <section className="ry-rsvp-section" id="rsvp" aria-label="Confirm Presence">
       <div className="ry-rsvp-header">
         <h2 className="ry-sec-title">PLEASE CONFIRM YOUR PRESENCE</h2>
+        <div className="ry-title-ornament" aria-hidden="true" />
       </div>
 
       <div className="ry-rsvp-card">
@@ -63,6 +64,9 @@ export function RsvpForm() {
               onChange={(e) => setGuests(e.target.value)}
               className="ry-form-select"
             >
+              <option value="" disabled hidden>
+                Select number of guests
+              </option>
               <option value="1">1 Guest</option>
               <option value="2">2 Guests</option>
               <option value="3">3 Guests</option>
@@ -71,7 +75,7 @@ export function RsvpForm() {
             </select>
           </div>
 
-          <button type="submit" className="ry-btn ry-btn--primary ry-rsvp-submit">
+          <button type="submit" className="ry-rsvp-submit">
             SEND VIA WHATSAPP
           </button>
         </form>

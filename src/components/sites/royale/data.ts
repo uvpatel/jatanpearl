@@ -164,7 +164,7 @@ export const CELEBRATION_CARDS = [
   },
   {
     icon: "elephant.png",
-    title: "MEMORIES & CELEBRATIONS",
+    title: "MEMORIES &\nCELEBRATIONS",
     alt: "Royal elephant motif",
   },
 ];

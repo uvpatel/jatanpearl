@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&family=Arima:wght@400;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 /* Royale - ported from the source stylesheets (fonts.css, scroll-cue.css, styles.css) */
 /* Self-hosted mirror of the Google Fonts CSS2 API response for Cormorant
    Garamond, Fraunces and Sora - the three "reads as type" faces papercut and
@@ -133,7 +135,7 @@
   align-items: center;
   gap: 2px;
   color: var(--scroll-cue-ink, #fff8ee);
-  font-family: var(--scroll-cue-font, "Cormorant Garamond", Georgia, serif);
+  font-family: var(--scroll-cue-font, var(--font-heading));
   font-size: 23px;
   font-style: italic;
   font-weight: 600;
@@ -216,9 +218,11 @@
    height alone (--k), so it always fits its door. */
 
 :root {
-  --font-display: "Fraunces", Georgia, serif;
-  --font-names: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Arima Madurai", "Arima", "Cormorant Garamond", Georgia, serif;
+  --font-display: "Arima Madurai", "Arima", "Fraunces", Georgia, serif;
+  --font-names: "Arima Madurai", "Arima", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-devanagari: "Tiro Devanagari Sanskrit", "Nirmala UI", serif;
 
   --royale-maroon: #560f31;
@@ -2077,13 +2081,15 @@ body::before {
 }
 
 .ryc-title {
-  margin: 0 0 clamp(28px, 5vw, 56px);
-  font-family: var(--font-display);
-  font-size: clamp(30px, 7vw, 52px);
-  font-weight: 600;
-  line-height: 1.1;
+  margin: 0 0 clamp(8px, 1.5vw, 14px);
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 4.2vw, 42px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
   text-align: center;
-  color: var(--royale-gold);
+  color: #fff6e8;
 }
 
 .ryc-grid {
@@ -2293,13 +2299,13 @@ body::before {
 /* Ceremony title in ALL CAPS bold serif */
 .ryc-card__title {
   margin: 0;
-  font-family: var(--font-names);
-  font-size: clamp(17px, 5.6cqw, 24px);
+  font-family: var(--font-heading);
+  font-size: clamp(17px, 5.5cqw, 23px);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #38040f;
-  line-height: 1.2;
+  line-height: 1.25;
   text-wrap: balance;
 }
 
@@ -2314,8 +2320,8 @@ body::before {
 /* Event date in ALL CAPS bold */
 .ryc-card__date-line {
   margin: 0;
-  font-family: var(--font-names);
-  font-size: clamp(14px, 4.4cqw, 18px);
+  font-family: var(--font-body);
+  font-size: clamp(13px, 4cqw, 16.5px);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2326,9 +2332,9 @@ body::before {
 /* Timing line */
 .ryc-card__timing-line {
   margin: clamp(4px, 1.4cqw, 8px) 0 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: clamp(12px, 3.4cqw, 14.5px);
-  font-weight: 500;
+  font-weight: 400;
   color: #692330;
   line-height: 1.25;
 }
@@ -3931,6 +3937,7 @@ body {
   min-height: 0;
   background-color: transparent;
   color: inherit;
+  font-family: var(--font-body);
 }
 
 /* --- Destination Announcement Banner (Below Hero) -------------------- */
@@ -3950,10 +3957,10 @@ body {
 }
 
 .ry-destination-banner__title {
-  font-family: var(--font-names);
-  font-size: clamp(18px, 2.5vw, 27px);
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 2.6vw, 30px);
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #4e0917;
   margin: 0;
@@ -3961,18 +3968,19 @@ body {
 }
 
 .ry-destination-banner__welcome {
-  font-family: var(--font-names);
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(15px, 1.8vw, 19px);
+  font-weight: 400;
   color: #692230;
-  margin: 10px auto 16px;
+  margin: 12px auto 16px;
   max-width: 620px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .ry-destination-banner__dates {
-  font-family: var(--font-display);
-  font-size: clamp(12px, 1.4vw, 14.5px);
+  font-family: var(--font-body);
+  font-size: clamp(13px, 1.4vw, 16px);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -3981,17 +3989,17 @@ body {
 }
 
 .ry-destination-banner__loc {
-  font-family: var(--font-display);
-  font-size: clamp(10px, 1.1vw, 12px);
+  font-family: var(--font-body);
+  font-size: clamp(11px, 1.1vw, 13px);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #7d434f;
-  margin: 4px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 .ryc-card__details {
-  font-family: var(--font-names);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-style: italic;
   color: var(--royale-maroon);
@@ -4032,13 +4040,13 @@ body {
 }
 
 .ry-navbar__brand {
-  font-family: var(--font-names);
+  font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 700;
   color: var(--royale-gold);
   text-decoration: none;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   transition: opacity 0.2s;
 }
@@ -4054,7 +4062,7 @@ body {
 }
 
 .ry-navbar__link {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -4096,8 +4104,8 @@ body {
 
 /* --- Shared Title & Ornament Styles ----------------------------------- */
 .ry-sec-title {
-  font-family: var(--font-names);
-  font-size: clamp(22px, 3.8vw, 36px);
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3.8vw, 38px);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -4108,25 +4116,25 @@ body {
 }
 
 .ry-sec-eyebrow {
-  font-family: var(--font-names);
-  font-size: clamp(12px, 1.4vw, 15px);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: clamp(12px, 1.3vw, 14.5px);
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #7a2b3b;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   text-align: center;
 }
 
 .ry-sec-desc {
-  font-family: var(--font-names);
-  font-size: clamp(14px, 1.6vw, 17px);
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.5vw, 16.5px);
+  font-weight: 400;
   color: #632331;
   text-align: center;
   max-width: 680px;
   margin: 12px auto 0;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .ry-title-ornament {
@@ -4191,66 +4199,82 @@ body {
 }
 
 .ry-celebration__grid {
-  max-width: 1040px;
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 2.5vw, 32px);
+  gap: clamp(16px, 2vw, 24px);
 }
 
 @media (max-width: 768px) {
   .ry-celebration__grid {
     grid-template-columns: 1fr;
-    max-width: 380px;
+    max-width: 360px;
   }
 }
 
 .ry-feature-card {
-  background: #fff8ef;
-  border: 1px solid rgba(195, 150, 85, 0.55);
-  border-radius: 16px;
-  padding: 30px 20px 24px;
+  background: #fffdf8;
+  border: 1px solid rgba(195, 150, 95, 0.48);
+  border-radius: 12px;
+  padding: clamp(24px, 3.2vw, 30px) clamp(16px, 2.2vw, 22px) clamp(20px, 2.8vw, 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
   box-shadow:
-    0 4px 20px rgba(70, 15, 25, 0.06),
-    inset 0 0 16px rgba(212, 163, 89, 0.12);
+    0 10px 30px rgba(110, 50, 20, 0.07),
+    0 2px 6px rgba(0, 0, 0, 0.02);
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Classical inner inset frame line */
+.ry-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(195, 150, 95, 0.38);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 .ry-feature-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow:
-    0 10px 28px rgba(70, 15, 25, 0.12),
-    inset 0 0 16px rgba(212, 163, 89, 0.2);
+    0 14px 36px rgba(110, 50, 20, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
 .ry-feature-card__art {
-  height: 96px;
+  height: 98px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .ry-feature-card__art img {
-  max-height: 85px;
+  max-height: 88px;
   max-width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
 }
 
 .ry-feature-card__title {
   margin: 0;
-  font-family: var(--font-names);
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-family: var(--font-heading);
+  font-size: clamp(14px, 1.35vw, 16.5px);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #38040f;
-  line-height: 1.3;
+  color: #4e0817;
+  line-height: 1.35;
+  position: relative;
+  z-index: 1;
 }
 
 /* --- 3. Venue Spotlight ----------------------------------------------- */
@@ -4273,12 +4297,12 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-display);
-  font-size: clamp(12px, 1.3vw, 14.5px);
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: clamp(12.5px, 1.3vw, 15px);
+  font-weight: 600;
   color: #7a2b3b;
   margin: 10px 0 0 0;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .ry-pin-icon {
@@ -4334,13 +4358,14 @@ body {
 }
 
 .ryc-subtitle {
-  font-family: var(--font-names);
+  font-family: var(--font-body);
   font-style: italic;
-  font-size: clamp(14px, 1.8vw, 18px);
+  font-size: clamp(14.5px, 1.6vw, 17.5px);
+  font-weight: 400;
   color: #fff6e8;
   max-width: 640px;
   margin: 8px auto 0;
-  line-height: 1.5;
+  line-height: 1.6;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   opacity: 0.95;
 }
@@ -4358,7 +4383,7 @@ body {
 /* Card titles in rich warm gold */
 #ryNoteCard .royale-scroll__name,
 #ryComplimentCard .royale-scroll__name {
-  font-family: var(--font-names);
+  font-family: var(--font-heading);
   font-size: clamp(24px, 3.8vw, 36px);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -4370,18 +4395,18 @@ body {
 
 /* Compliments lines */
 #ryComplimentCard .royale-scroll__line {
-  font-family: var(--font-names);
-  font-size: clamp(17px, 2.3vw, 22px);
+  font-family: var(--font-body);
+  font-size: clamp(16px, 2.2vw, 20px);
   font-weight: 500;
   color: #fae6cf;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   margin: 6px 0;
 }
 
 /* Note From Us body container */
 .royale-scroll__note-body {
   text-align: center;
-  font-family: var(--font-names);
+  font-family: var(--font-body);
   color: #fae6cf;
   padding: 0;
   max-width: 680px;
@@ -4390,8 +4415,8 @@ body {
 
 /* Salutation: Dear Family and Friends, */
 .royale-scroll__note-salutation {
-  font-family: var(--font-names);
-  font-size: clamp(17px, 2.4vw, 22px);
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2.4vw, 22px);
   font-weight: 600;
   color: #fae6cf;
   margin: 0 0 18px 0;
@@ -4401,11 +4426,11 @@ body {
 
 /* Body paragraphs */
 .royale-scroll__note-p {
-  font-family: var(--font-names);
-  font-size: clamp(15px, 2vw, 19.5px);
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: clamp(14.5px, 1.8vw, 17px);
+  font-weight: 400;
   color: #fae6cf;
-  line-height: 1.68;
+  line-height: 1.75;
   margin: 0 auto 18px auto;
   max-width: 620px;
   text-wrap: balance;
@@ -4414,19 +4439,19 @@ body {
 
 /* Sign-off: With love, */
 .royale-scroll__note-signoff {
-  font-family: var(--font-names);
-  font-size: clamp(16px, 2.2vw, 20px);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 400;
   color: #fae6cf;
   margin: 24px 0 10px 0;
-  font-style: normal;
   letter-spacing: 0.02em;
 }
 
 /* Couple: PEARL & JATAN */
 .royale-scroll__note-couple {
-  font-family: var(--font-names);
-  font-size: clamp(18px, 2.6vw, 24px);
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 2.8vw, 26px);
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -4453,8 +4478,8 @@ body {
 }
 
 .ry-venue-name {
-  font-family: var(--font-names);
-  font-size: clamp(22px, 3.5vw, 34px);
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3.6vw, 36px);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -4466,9 +4491,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-display);
-  font-size: clamp(12px, 1.3vw, 14.5px);
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: clamp(12.5px, 1.3vw, 15px);
+  font-weight: 600;
   color: #7a2b3b;
   margin: 0;
 }
@@ -4517,7 +4542,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -4554,9 +4579,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- 8. RSVP Section -------------------------------------------------- */
+/* --- 8. RSVP Section (Matching Reference) ------------------------------ */
 .ry-rsvp-section {
-  padding: clamp(30px, 5vw, 60px) 24px clamp(50px, 7vw, 90px);
+  padding: clamp(35px, 5vw, 65px) 24px clamp(55px, 7vw, 95px);
   background-color: var(--royale-paper);
   background-image: url("/sites/royale/media/motif_tile.svg");
   background-repeat: repeat;
@@ -4567,25 +4592,38 @@ body {
 
 .ry-rsvp-header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: clamp(24px, 3.5vw, 36px);
 }
 
 .ry-rsvp-card {
-  max-width: 520px;
+  max-width: 480px;
   margin: 0 auto;
-  background: #fff8ef;
-  border: 1px solid rgba(195, 150, 85, 0.55);
-  border-radius: 18px;
-  padding: clamp(24px, 4vw, 36px);
+  background: #fffdf9;
+  border: 1px solid rgba(190, 145, 95, 0.48);
+  border-radius: 12px;
+  padding: clamp(28px, 4.5vw, 38px) clamp(24px, 4vw, 34px);
   box-shadow:
-    0 10px 35px rgba(50, 10, 20, 0.08),
-    inset 0 0 16px rgba(212, 163, 89, 0.1);
+    0 14px 40px rgba(110, 50, 20, 0.07),
+    0 2px 8px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+/* Classical inner inset frame line */
+.ry-rsvp-card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(190, 145, 95, 0.38);
+  border-radius: 8px;
+  pointer-events: none;
 }
 
 .ry-rsvp-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .ry-form-field {
@@ -4596,48 +4634,99 @@ body {
 }
 
 .ry-form-label {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #5c1b28;
+  color: #5c0d1e;
 }
 
 .ry-form-input,
 .ry-form-select {
   width: 100%;
   padding: 12px 14px;
-  background: #ffffff;
-  border: 1px solid #d5be9f;
+  background: #fffefa;
+  border: 1.5px solid #d4b896;
   border-radius: 8px;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  color: #38040f;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: #420815;
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
 }
 
+.ry-form-input::placeholder {
+  color: #a8927e;
+  opacity: 0.85;
+}
+
+.ry-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235c0d1e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
 .ry-form-input:focus,
 .ry-form-select:focus {
-  border-color: #8c2438;
-  box-shadow: 0 0 0 3px rgba(140, 36, 56, 0.15);
+  border-color: #8c1d35;
+  box-shadow: 0 0 0 3px rgba(140, 29, 53, 0.12);
 }
 
 .ry-rsvp-submit {
   margin-top: 8px;
   width: 100%;
+  background: #730022;
+  border: 1.5px solid #8e1c35;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 14px 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(115, 0, 34, 0.25);
+  transition: all 0.25s ease;
+}
+
+.ry-rsvp-submit:hover {
+  background: #8c022b;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(115, 0, 34, 0.35);
+}
+
+.ry-rsvp-submit:active {
+  transform: translateY(0);
 }
 
 /* --- 9. Bottom Maroon Footer ------------------------------------------ */
 .ry-footer {
   background-color: #2b030c;
   color: #fff6e8;
-  padding: clamp(40px, 6vw, 70px) 24px clamp(30px, 5vw, 50px);
+  padding: clamp(60px, 8vw, 100px) 24px clamp(35px, 5vw, 60px);
   text-align: center;
   position: relative;
-  z-index: 2;
-  border-top: 1px solid rgba(212, 163, 89, 0.25);
+  z-index: 3;
+  border-top: none;
+}
+
+.ry-footer__tear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(-46%) scaleY(-1);
+  pointer-events: none;
+  user-select: none;
+  z-index: 3;
 }
 
 .ry-footer__inner {
@@ -4646,6 +4735,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 4;
 }
 
 .ry-footer__divider {
@@ -4656,8 +4747,8 @@ body {
 }
 
 .ry-footer__couple {
-  font-family: var(--font-names);
-  font-size: clamp(26px, 4.5vw, 44px);
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4.5vw, 46px);
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--royale-gold);
@@ -4666,25 +4757,33 @@ body {
 }
 
 .ry-footer__meta {
-  font-family: var(--font-display);
-  font-size: clamp(11px, 1.4vw, 13px);
+  font-family: var(--font-body);
+  font-size: clamp(11.5px, 1.4vw, 13.5px);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #e5cdb5;
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   opacity: 0.9;
 }
 
+.ry-footer__hairline {
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 163, 89, 0.45), transparent);
+  margin: 0 auto 16px auto;
+}
+
 .ry-footer__blessing {
-  font-family: var(--font-names);
+  font-family: var(--font-body);
   font-style: italic;
-  font-size: clamp(15px, 1.8vw, 18px);
+  font-size: clamp(14.5px, 1.8vw, 17.5px);
   color: #f7ebe1;
-  line-height: 1.6;
+  line-height: 1.65;
   max-width: 600px;
   margin: 0 0 20px 0;
   opacity: 0.95;
 }
+
 
 

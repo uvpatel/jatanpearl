@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Royale - Wedding Invitation",
-  description: "Wedding invitation for Devang & Shruti",
+  title: "Pearl & Jatan - Destination Wedding Invitation",
+  description:
+    "Destination Wedding invitation for Pearl & Jatan in Anand, Gujarat & Mandavgarh (Mandu), Madhya Pradesh. 15 January – 2 February 2027.",
 };
 
 export default function RootLayout({
@@ -17,4 +18,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

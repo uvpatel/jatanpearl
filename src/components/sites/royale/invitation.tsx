@@ -211,7 +211,11 @@ export function RoyaleInvitation() {
               <div className="ry-feature-card__art">
                 <img src={`${A}/${item.icon}`} alt={item.alt} />
               </div>
-              <h3 className="ry-feature-card__title">{item.title}</h3>
+              <h3 className="ry-feature-card__title">
+                {item.title.split("\n").map((line, idx) => (
+                  <span key={idx} style={{ display: "block" }}>{line}</span>
+                ))}
+              </h3>
             </div>
           ))}
         </div>
@@ -410,12 +414,19 @@ export function RoyaleInvitation() {
 
       {/* 11. Bottom Maroon Footer */}
       <footer className="ry-footer" role="contentinfo">
+        <img
+          className="ry-tear ry-tear--top ry-footer__tear"
+          src={`${A}/section_divider_maroon.svg`}
+          alt=""
+          aria-hidden="true"
+        />
         <div className="ry-footer__inner">
           <img className="ry-footer__divider" src={`${A}/divider2.png`} alt="" aria-hidden="true" />
           <h2 className="ry-footer__couple">PEARL &amp; JATAN</h2>
           <p className="ry-footer__meta">
             15 JANUARY – 03 FEBRUARY 2027 &nbsp;|&nbsp; MANDAVGARH (MANDU), MADHYA PRADESH
           </p>
+          <div className="ry-footer__hairline" aria-hidden="true" />
           <p className="ry-footer__blessing">
             Thank you for being part of our beautiful journey. Your presence and blessings make our celebration truly special.
           </p>
